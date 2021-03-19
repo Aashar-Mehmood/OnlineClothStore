@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Home</title>
+	<link rel="stylesheet" href="./fontAwesome/css/all.css" />
+	<link rel="stylesheet" type="text/css" href="home.css" />
+</head>
+
+<body>
+	<header>
+		<nav id="mainNav">
+			<h1><span>Online </span>Cloth Store</h1>
+			<div>
+				<input type="text" placeholder="Search latset Collections" />
+				<i class="fas fa-search"></i>
+			</div>
+			<ul>
+				<li><a href="home.html" target="_self">HOME</a></li>
+				<li><a href="signup.html" target="_blank">SIGN UP</a></li>
+				<li><a href="login.html" target="_blank">LOGIN</a></li>
+				<li><a href="#">SHOES</a></li>
+				<li><a href="register.html" target="_blank">CLOTHES</a></li>
+				<li><a href="#">JACKETS</a></li>
+			</ul>
+		</nav>
+		<section id="bannerImages">
+			<div>
+
+			</div>
+		</section>
+	</header>
+
+	<main>
+		<section>
+			<h2>Latest Collections for Men, Women and Children</h2>
+			<div class="cont">
+				<div class="items">
+					<img src="images/category_1.png" alt="Women Clothes" />
+					<a href="women.html"> <button>Shop For Women</button></a>
+				</div>
+				<div class="items">
+					<img src="images/men/formen4.jpg" alt="Men Clothes" />
+					<a href="men.html"><button>Shop For Men</button></a>
+				</div>
+				<div class="items">
+					<img src="images/children/a3.jpg" alt="Children Clothes" />
+					<a href="children.html"><button>Shop For Children</button></a>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div id="register">
+				<h2>Connect With Us</h2>
+				<div>
+					<input type="text" name="Email" class="email"> &nbsp;Name
+				</div>
+				<div>
+					<input type="text" name="Email" class="email"> &nbsp; Email Address
+				</div>
+				<div>
+					<textarea name="suggest" id="suggestion">Give Your Suggestions</textarea>
+				</div>
+				<button type="submit" id="sub">Submit</button>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<section>
+			<div class="payImages">
+				<ul>
+					<li><img src="images/pay-cod.jpg" /></li>
+					<li><img src="images/pay-ez.jpg" /></li>
+					<li><img src="images/pay-hbl.jpg" /></li>
+					<li><img src="images/pay-mc.jpg" /></li>
+					<li><img src="images/pay-visa.jpg" /></li>
+				</ul>
+			</div>
+		</section>
+		<div class="img">
+			<a href="https://www.facebook.com/amjadkayani.kayani.7" target="_blank">
+				<img src="images/logo.png" />
+			</a>
+			<h3>Join Us On Social Media Platforms</h3>
+		</div>
+
+		<div class="aboutcontainer">
+			<div class="about" id="about1">
+				<ul>
+					<li>
+						<h2 style="margin: 0">Further Links</h2>
+					</li>
+					<li><a href="about.html">About Us</a></li>
+					<li>Contact</li>
+					<li>Privcy Policy</li>
+					<li>Return Policy</li>
+					<li>Location</li>
+					<li>More Info</li>
+					<li>Shipping Info</li>
+				</ul>
+			</div>
+
+			<div class="about" id="about2">
+				<ul>
+					<li>
+						<h2 style="margin: 0">Shop For</h2>
+					</li>
+					<li><a href="men.html" target="_blank">Men</a></li>
+					<li><a href="women.html" target="_blank"> Women</a></li>
+					<li><a href="#">Girls</a></li>
+					<li><a href="#">Boys</a></li>
+					<li><a href="children.html" target="_blank"> Children</a></li>
+				</ul>
+			</div>
+
+			<div class="about" id="about3">
+				<ul>
+					<li>
+						<h2 style="margin: 0">Shop By Category</h2>
+					</li>
+					<li><a href="#">Jackets</a></li>
+					<li><a href="#">Shirts</a></li>
+					<li><a href="#">Pants</a></li>
+					<li><a href="#">Swetars</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="contact">
+			<ul>
+				<li>
+					<h3>Contact Us</h3>
+				</li>
+				<li> +923-54565767</li>
+				<br>
+				<li> +923-54565767</li>
+				<br>
+				<li> +923-54565767</li>
+				<br>
+				<li> +923-54565767</li>
+				<br>
+				<li> +923-54565767</li>
+			</ul>
+		</div>
+	</footer>
+	<section>
+		<div class="end">
+			<h2>copyright&nbsp;&copy&nbsp;abcStore2020 All rights reserved</h2>
+		</div>
+	</section>
+	<script src="./app.js"></script>
+	<script>
+		const images = ["./backgrounds/banner2.png", "./backgrounds/childr.png", "./backgrounds/banner1.png"];
+
+		const bannerArea = document.getElementById('bannerImages');
+		var counter = 0;
+
+
+		setInterval(() => {
+			bannerArea.style.background = `url('${images[counter]}')`;
+			bannerArea.style.backgroundSize = 'cover';
+
+			if (counter < images.length - 1) {
+				counter++;
+			} else {
+				counter = 0;
+			}
+		}, 6000);
+	</script>
+</body>
+
+</html>

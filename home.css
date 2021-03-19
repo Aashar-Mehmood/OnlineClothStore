@@ -1,0 +1,287 @@
+*{
+    box-sizing: border-box;
+}
+body, html{
+    width:100vw;
+    margin:0px;    
+}
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #dfe8f1;
+}
+
+a {
+    color:black;
+    text-decoration: none;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+/*...................TOP STICKY NAVIGATION BAR..........*/
+#mainNav{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    min-height: 100px;
+}
+
+#mainNav h1{
+    padding-top:7px;
+    font-size: 2em;
+    color: #38e455;
+}
+
+#mainNav span{
+    color: rgb(243, 146, 146);
+}
+
+#mainNav div {
+    margin-top: 30px;
+    display: flex;
+}
+#mainNav div input{
+    width: 250px;
+    max-height: 40px ;
+    margin-right: 20px;
+    border-radius: 7px;
+}
+#mainNav div input::placeholder{
+    padding-left: 30px;
+}
+#mainNav div i{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgb(243, 146, 146);
+    font-size: 20px;
+    border-radius: 50%;
+    color: white;
+}
+
+
+#mainNav>ul{   
+    max-width:60%;
+    display:flex;
+    flex-direction: row;
+    padding-top: 10px;
+}
+
+#mainNav>ul>li {
+    text-align: center;
+    list-style-type: none;
+    flex:1;
+    margin-left: 2px;
+    font:16px bold;
+    width: 130px;
+    height: 45px;
+    line-height:45px;
+    position: relative;
+}
+#mainNav>ul>li.active{
+    border-radius: 5px;
+    background-color: rgb(243, 146, 146);
+    font-weight: bold;
+}
+#mainNav>ul>li.active a{
+    color: white;
+}
+
+#mainNav ul li a::after {
+    content:' ';
+    position: absolute;
+    bottom: 5px;
+    left: 25%;
+    display: inline-block;
+    width: 50%;
+    height: 3px;
+    background-color: rgb(243, 146, 146);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+    transform: scaleX(0);
+}
+#mainNav ul li:hover ::after{
+    transform: scale(1);
+}
+
+/* ..................Banner Images are................. */
+section#bannerImages{
+    margin-top: 20px;
+    min-height: 500px;
+    width: 100%;
+    background: url('./backgrounds/banner1.png') no-repeat center ;
+    background-size: cover;
+    animation: changeBg 6s infinite linear ;
+    -webkit-animation: changeBg 6s infinite linear;
+    -moz-animation: changeBg 6s infinite linear;
+    -o-animation: changeBg 6s infinite linear;
+
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+section#bannerImages>div{
+    width: 100%;
+    min-height: 500px;
+    background:rgba(255, 255, 255, 0.2);   
+}
+
+@keyframes changeBg{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+@-webkit-keyframes changeBg{
+    form{
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+/* ...............MAIN AREA........... */
+
+
+
+main h2{
+    text-align: center;
+    padding:20px 0;
+}
+div.cont{
+	width: 100vw;
+	display: flex;
+	flex-flow: row;
+    padding: 5vh 0;
+}
+div.items{
+	flex:1;
+	display: flex;
+	align-content: space-around;
+	flex-flow: column;
+}
+.items>img {
+	width:300px;
+	height: 300px;
+	border-radius: 50%;
+	margin-left: 8vw;
+}
+.items button {
+	width: 240px;
+	height: 50px;
+	margin-left: 10vw;
+	margin-top: 10px;
+    border-radius: 5px;
+}
+button:hover {
+	cursor:pointer;
+}
+
+main section:nth-child(2){
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+div#register{
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+div#register h2 {
+    text-align: center;
+    margin-top: 27px;
+    margin-bottom: 0;
+    text-decoration: underline;
+    line-height: 1.2em;
+}
+.email, #suggestion{
+    height: 40px;
+    width: 100%;
+    margin: 10px 0;
+}
+#suggestion{
+    height: 200px;
+}
+
+button#sub {
+    width:10vw;
+    height: 30px;
+    font-weight: bold;
+    margin-top: 5px;
+    padding-top: 14px;
+    padding-bottom: 27px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+button#sub:hover{
+    background-color: rgb(243, 146, 146);
+    color: white;   
+}
+
+/* .................FOOTER AREA........ */
+
+footer {
+    width: 100%;
+    background-color: #a0955f;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+footer section {
+    min-width: 100%;
+}
+
+footer section ul{
+    display: flex;
+    flex-flow: row;
+    width: 60%;
+    transform: translateX(40%);
+}
+footer section ul li {
+    margin-left: 20px;
+}
+
+footer .img{
+    max-width: 300px;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.aboutcontainer{
+    display: flex;
+    max-width: 60%;
+    margin: 0 80px;
+}
+#about2{
+    margin-left: 30px;
+}
+.aboutcontainer ul li {
+    padding-top: 12px;
+    font: 18px bold;
+}
+.aboutcontainer a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+div.contact ul{
+    list-style-type: none;
+}
+.end {
+    width: 100%;
+    border-top: 1px solid white;
+    text-align: center;
+    padding:30px 0;
+    font-style: italic;
+}

@@ -1,0 +1,262 @@
+body, html{
+  
+    height:100vh;
+    width:100vw;
+    margin:0px;    
+}
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #dfe8f1;
+}
+
+
+/*...................TOP STICKY NAVIGATION BAR..........*/
+
+
+#mainNav{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    min-height: 100px;
+}
+
+#mainNav h1{
+    padding-top:7px;
+    font-size: 2em;
+    color: #38e455;
+}
+
+#mainNav span{
+    color: rgb(243, 146, 146);
+}
+
+#mainNav div {
+    margin-top: 30px;
+    display: flex;
+}
+#mainNav div input{
+    width: 250px;
+    max-height: 40px ;
+    margin-right: 20px;
+    border-radius: 7px;
+}
+#mainNav div input::placeholder{
+    padding-left: 30px;
+}
+#mainNav div i{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: rgb(243, 146, 146);
+    font-size: 20px;
+    border-radius: 50%;
+    color: white;
+}
+
+
+#mainNav>ul{   
+    max-width:60%;
+    display:flex;
+    flex-direction: row;
+    padding-top: 10px;
+}
+
+#mainNav>ul>li {
+    text-align: center;
+    list-style-type: none;
+    flex:1;
+    margin-left: 2px;
+    font:16px bold;
+    width: 130px;
+    height: 45px;
+    line-height:45px;
+    position: relative;
+}
+#mainNav>ul>li.active{
+    border-radius: 5px;
+    background-color: rgb(243, 146, 146);
+    font-weight: bold;
+}
+#mainNav>ul>li.active a{
+    color: white;
+}
+
+#mainNav ul li a::after {
+    content:' ';
+    position: absolute;
+    bottom: 5px;
+    left: 25%;
+    display: inline-block;
+    width: 50%;
+    height: 3px;
+    background-color: rgb(243, 146, 146);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+    transform: scaleX(0);
+}
+#mainNav ul li:hover ::after{
+    transform: scale(1);
+}
+
+main{
+    min-height: 900px;
+    background:url('./backgrounds/laptop.jpg') no-repeat;
+    background-size: cover;
+
+}
+
+div.container {
+    min-height: inherit;
+    width: 100vw;
+    background-color: rgba(255, 255 ,255, 0.6);
+}
+div.container h2 {
+    margin-bottom: 30px;
+}
+div.container>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-top: 60px;
+    max-width: 96%;
+}
+
+div.container>div div{
+    padding-top: 20px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 50%;
+    margin-right: 210px;
+}
+div.container>div div {
+    margin-top: 25px;
+}
+
+div.container input{
+    width: 30vw;
+    height: 40px;
+    border-radius: 5px;
+
+}
+div.container h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+div.container a{
+    margin-left: 10vw;
+    text-decoration: underline;
+    margin-top: 5px;
+    font-size: 20px;
+}
+div.container button {
+    margin-left: 15.9vw;
+    padding: 10px 30px;
+    border-radius: 4px;
+}
+
+div.newMember h2 {
+    margin-left: 10vw;
+    margin-top: 10px;
+}
+div.newMember a {
+    margin-left:0; 
+}
+div.newMember button {
+    margin-left: 12vw;
+    padding: 10px 30px;
+}
+button:hover{
+    cursor: pointer;
+}
+
+
+
+
+.bottom {
+font-style: italic;
+height: 50%;
+width: 100vw;
+background-color: #a0955f;
+text-align: center;
+clear: both;
+position: absolute;
+top: 130%;
+z-index: 3;
+}
+.part_a {
+float: right;
+width: 80%;
+height: 80%;
+border: 1px solid black;
+box-sizing: border-box;
+}
+.part_b {
+float: left;
+width: 20%;
+height: 80%;
+border: 1px solid black;
+box-sizing: border-box;
+}
+
+ 
+.part_a ul {
+float: left;
+list-style-type: none;
+margin: 0px;
+padding-left: 670px;
+}
+.part_a ul li {
+padding: 0px;
+float: left;
+}
+.part_a ul li img {
+padding-left: 20px;
+width:74px;
+height: 40px;
+}
+
+.part_b>h3{
+    margin-top: 0px;
+}
+
+.aboutcontainer{
+    display: flex;
+    width: 40vw;
+    position: relative;
+    top: 2pc;
+    z-index: 5;
+    left: 20pc;
+
+}
+#about2{
+    margin-left: 30px;
+}
+.aboutcontainer ul li {
+    padding-top: 12px;
+    font: 18px bold;
+}
+.aboutcontainer a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.end {
+width: 100%;
+height: 20%;
+border-top: 1px solid white;
+float: none;
+clear: both;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+li {
+    list-style-type: none;
+}
